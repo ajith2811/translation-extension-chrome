@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Translation Extension</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app" aria-labelledby="app-title">
+      <header class="header">
+        <div>
+          <h1 id="app-title">Translate</h1>
+          <p>English to French, Telugu, and Spanish</p>
+        </div>
+      </header>
+
+      <form id="translate-form" class="translator">
+        <label for="source-text">English text</label>
+        <textarea
+          id="source-text"
+          name="sourceText"
+          maxlength="1000"
+          rows="6"
+          placeholder="Type English text here"
+          required
+        ></textarea>
+
+        <div class="actions">
+          <button id="translate-button" class="button primary" type="submit">
+            Translate
+          </button>
+          <button id="clear-button" class="button secondary" type="button">
+            Clear
+          </button>
+        </div>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section class="results" aria-label="Translations">
+        <article class="result">
+          <div class="result-header">
+            <h2>French</h2>
+            <button class="copy-button" type="button" data-copy="french" disabled>
+              Copy
+            </button>
+          </div>
+          <p id="french" class="translation empty">No translation yet</p>
+        </article>
+
+        <article class="result">
+          <div class="result-header">
+            <h2>Telugu</h2>
+            <button class="copy-button" type="button" data-copy="telugu" disabled>
+              Copy
+            </button>
+          </div>
+          <p id="telugu" class="translation empty">No translation yet</p>
+        </article>
+
+        <article class="result">
+          <div class="result-header">
+            <h2>Spanish</h2>
+            <button class="copy-button" type="button" data-copy="spanish" disabled>
+              Copy
+            </button>
+          </div>
+          <p id="spanish" class="translation empty">No translation yet</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

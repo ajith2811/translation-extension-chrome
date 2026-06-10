@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Translation Extension",
+  "description": "Translate English text into French, Telugu, and Spanish from a Chrome extension popup.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Translate",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.mymemory.translated.net/*"
+  ]
+}
